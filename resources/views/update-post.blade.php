@@ -7,6 +7,7 @@
     <!--   Font Awesome  -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    {{-- CSS File --}}
     <link rel="stylesheet" href="/css/updata.css">
     {{-- Icon --}}
     <link rel="shortcut icon" href="https://img.icons8.com/bubbles/50/m.png" type="image/x-icon">
@@ -45,13 +46,9 @@
                     <div class="box-container">
 
                         <div class="dis-flex">
-                            {{-- <label for="">Description</label> --}}
                             <label class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Description :</label>
                             <input class="dis" name="description" value="{{$data->description}}" >
                         </div>
-
-                        {{-- <hr> --}}
-
 
                         <div class="grid w-full max-w-xs items-center gap-1.5 mt-3">
                             <label class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Picture :</label>
@@ -76,8 +73,6 @@
 
             </form>
         </div>
-
-
 
 
 </body>

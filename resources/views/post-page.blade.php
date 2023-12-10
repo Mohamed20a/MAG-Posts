@@ -7,6 +7,7 @@
     <!--   Font Awesome  -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    {{-- CSS File --}}
     <link rel="stylesheet" href="css/post.css">
     {{-- Icon --}}
     <link rel="shortcut icon" href="https://img.icons8.com/bubbles/50/m.png" type="image/x-icon">
@@ -46,7 +47,6 @@
                     <th scope="row">{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</th>
 
                     <td>
-                        {{--<button class="btn btn-success"> --}}
                         <a href="{{url('update-post' , $post->id)}}">
                             <button class="noselect" id="update">
                                 <span class="text">
@@ -57,11 +57,9 @@
                                 </span>
                             </button>
                         </a>
-                        {{-- </button> --}}
                     </td>
 
                     <td>
-                        {{-- <button class="btn btn-danger"> --}}
                         <a onclick="return confirm('Are you sure you want to delete this post ?')" href="{{url('delete-post', $post->id)}}">
                             <button class="noselect" id="delete">
                                 <span class="text">
@@ -71,7 +69,6 @@
                                     <i class="fa-solid fa-x" style="color: #fff;"></i>
                                 </span>
                             </button>
-                        {{-- </button> --}}
                         </a>
                     </td>
 

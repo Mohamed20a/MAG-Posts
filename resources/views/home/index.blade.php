@@ -24,24 +24,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css">
 
-        {{-- <link rel="stylesheet" href="post.css"> --}}
-
     </head>
-
-
-    {{--
-        Hello all,
-        This is a Laravel project that simulates publishing posts, updating them, and deleting them.
-        Each user has a page for publishing the post, another page for displaying all his posts, and a page for updating and deleting.
-        There is a home page to display all posts and an account of when the post was published for all users
-        Each user has the right to delete only his own post from the main page and not the posts of other users
-        Visual mockery was used in the design and Facebook posts were simulated in terms of interaction and comment buttons
-        Laravel Jetstream was used to build login and data logging
-
-        Languages used: Html, CSS, Js, Bootstrap, Laravel, MySQL
-    --}}
-
-
     <body class="antialiased">
         <nav class="navbar fixed-top  navbar-expand-lg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  " id="navbar">
             <div class="container-fluid ">
@@ -58,8 +41,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navTogller">
                     <div class="navbar-nav">
-                        {{-- <a class="nav-link active" aria-current="page" href="#">Home</a> --}}
-
+                        {{-- If User is Login  --}}
                         @if (Route::has('login'))
                             @auth
                                 <a class="nav-link"  href="{{ url('/dashboard') }}">
@@ -97,13 +79,8 @@
                                         </div>
                                     </button>
                                 </a>
-
-                                {{-- <a class="nav-link" id="login" href="{{ route('login') }}">Login</a>
-                                <a class="nav-link" id="reg" href="{{ route('register') }}">Register</a> --}}
                             @endauth
-
                         @endif
-
                     </div>
                 </div>
             </div>
@@ -169,7 +146,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <h4>{{$post->username}}</h4> --}}
                 <p>{{$post->description}}</p>
                 <img class="img" src="posts/{{$post->image}}" alt="" >
 
@@ -236,7 +212,6 @@
                             <div><i id="share" class="fa-solid fa-paper-plane"></i></div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -261,33 +236,3 @@
 
     </body>
 </html>
-
-
-
-        {{-- <nav class="">
-            @if (Route::has('login'))
-                <ul class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <li>
-                            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                        </li>
-                    @else
-
-                        <li>
-                            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                        </li>
-
-                        @if (Route::has('register'))
-                            <li>
-                                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                            </li>
-                            @endif
-                    @endauth
-                </ul>
-            @endif
-
-            <div>
-                Home Page
-            </div>
-
-        </nav> --}}

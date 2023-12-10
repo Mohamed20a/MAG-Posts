@@ -7,15 +7,16 @@
     <!--   Font Awesome  -->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    {{-- CSS File --}}
     <link rel="stylesheet" href="css/post.css">
     {{-- Icon --}}
     <link rel="shortcut icon" href="https://img.icons8.com/bubbles/50/m.png" type="image/x-icon">
-    <script src="script.js"></script>
     <title>MAG | Dashboard</title>
 </head>
 <body>
 
     <x-app-layout>
+
     </x-app-layout>
 
 
@@ -35,7 +36,6 @@
                         </svg>
                     </div>
                     <p class="title">{{ Auth::user()->name }}</p>
-                    {{-- <span>{{ \Carbon\Carbon::now()->format('g:ia') }}</span> --}}
                 </div>
             </div>
 
@@ -104,18 +104,6 @@
 
             </form>
         </div>
-
-
-
-
-        {{-- <footer class="bg-body-tertiary text-center text-lg-start">
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023 Copyright:
-                <a class="text-body" href="https://mohammed-ahmed.netlify.app/" target="blank">Mohamed Ahmed</a>
-            </div>
-            <!-- Copyright -->
-        </footer> --}}
 
 
 </body>
