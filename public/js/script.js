@@ -31,20 +31,21 @@ function complete() {
 
 
 
+// Navbar Fixed
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function () {
-  const currentScrollPos = window.pageYOffset;
+    const currentScrollPos = window.pageYOffset;
 
-  if (prevScrollPos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-    document.getElementById("navbar").style.transition = ".3s all ease-in-out";
-    document.getElementById("navbar").classList.add("fixed");
-  } else {
-    document.getElementById("navbar").style.top = "-85px"; // ارتفاع النافبار
-    document.getElementById("navbar").style.transition = ".2s all ease-in-out";
-    document.getElementById("navbar").classList.remove("fixed");
-  }
+    if (prevScrollPos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+        document.getElementById("navbar").style.transition = ".3s all ease-in-out";
+        document.getElementById("navbar").classList.add("fixed");
+    } else {
+        document.getElementById("navbar").style.top = "-90px";
+        document.getElementById("navbar").style.transition = ".2s all ease-in-out";
+        document.getElementById("navbar").classList.remove("fixed");
+    }
 
-  prevScrollPos = currentScrollPos;
+    prevScrollPos = currentScrollPos;
 };

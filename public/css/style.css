@@ -283,11 +283,8 @@ hr {
     background: #e4e6eb;
     width: 600px;
     padding: 3px 17px;
-    /* height: 37px; */
-    /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    /* text-align: center; */
     border-radius: 15px;
 }
 .comment-flex{
